@@ -46,10 +46,9 @@ async def help(event):
                     ),
                     link_preview=False
                    )
-@client.on(events.NewMessage(pattern="^/komutlar"))
-async def komutlar(event):
-  send_message_reply_text("Botumuzun komut bölümüne hoş geldiniz\n Öncelikle botun sıkıntısız çalışması için tüm yönetici haklarını lütfen veriniz\n Üye etiketleme = /all <mesajınız> \nEtiketi durdurmak için = /stop \n**Yakında botumuza yeni özellikler eklenecektir**
-                    ),
+@bot.message_handler(commands=['/komutlar'])
+def komutlar(message):
+  bot.send_message(message.chat.id, "Merhaba komut listesine hoş geldiniz \nUnutmayın ki botu başlatmak için bota yönetici haklarını vermeniz lazım \nGrubta ki üyeleri etiketlemek için = /all <mesaj> \nEtiket işlemini iptal etmek için = /stop \nBot hakında bilgi almak istiyorsanız = /bilgi komutunu kullanınız")
                     link_preview=False
                     )
 
