@@ -49,6 +49,7 @@ async def help(event):
 @bot.message_handler(commands=['/komutlar'])
 def komutlar(message):
   bot.send_message(message.chat.id, "Merhaba komut listesine hoş geldiniz \nUnutmayın ki botu başlatmak için bota yönetici haklarını vermeniz lazım \nGrubta ki üyeleri etiketlemek için = /all <mesaj> \nEtiket işlemini iptal etmek için = /stop \nBot hakında bilgi almak istiyorsanız = /bilgi komutunu kullanınız")
+                   
                     link_preview=False
                     )
 
