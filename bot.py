@@ -46,6 +46,11 @@ async def help(event):
                     ),
                     link_preview=False
                    )
+@client.on(events.NewMessage(pattern="^/komutlar"))
+async def komutlar(event):
+  await event.reply("Botumuzun komut bölümüne hoş geldiniz\n Öncelikle botun sıkıntısız çalışması için tüm yönetici haklarını lütfen veriniz\n Üye etiketleme = /all <mesajınız> \nEtiketi durdurmak için = /stop \n**Yakında botumuza yeni özellikler eklenecektir**),
+                    link_preview=False
+                    )
 
 
 @client.on(events.NewMessage(pattern="^/all ?(.*)"))
